@@ -321,6 +321,8 @@ function ProductVisual({ product, colorId, size = "100%" }) {
       <img
         src={src}
         alt={`${product.name}${color ? ` — ${colorLabel(color.id)}` : ""}`}
+        loading="lazy"
+        decoding="async"
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
     </div>
@@ -595,7 +597,7 @@ function HomePage({ navigate }) {
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }} className="rtlh-craft-grid">
           <Reveal>
             <div style={{ aspectRatio: "4/5", borderRadius: 4, overflow: "hidden", border: `1px solid ${C.line}` }}>
-              <img src={IMG.RTLHAmbientPic2} alt="RTLH brand detail" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.RTLHAmbientPic2} alt="RTLH brand detail" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </Reveal>
           <Reveal>
@@ -680,7 +682,7 @@ function EventsPage() {
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <Reveal>
             <div style={{ borderRadius: 4, overflow: "hidden", border: `1px solid ${C.line}`, aspectRatio: "21/9" }}>
-              <img src={IMG.RTLHAmbientPic4} alt="RTLH live engraving station and gifting" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.RTLHAmbientPic4} alt="RTLH live engraving station and gifting" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </Reveal>
         </div>
@@ -835,7 +837,7 @@ function ProductPage({ slug, navigate }) {
                 <div style={{ display: "flex", gap: 10, marginTop: 12 }}>
                   {product.gallery.map((g, i) => (
                     <div key={i} style={{ flex: 1, aspectRatio: "1/1", borderRadius: 4, overflow: "hidden", border: `1px solid ${C.line}` }}>
-                      <img src={g} alt={`${product.name} detail ${i + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                      <img src={g} alt={`${product.name} detail ${i + 1}`} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                   ))}
                 </div>
@@ -1024,12 +1026,12 @@ function AboutPage({ navigate }) {
         <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }} className="rtlh-about-photos">
           <Reveal>
             <div style={{ borderRadius: 4, overflow: "hidden", border: `1px solid ${C.line}`, aspectRatio: "4/5" }}>
-              <img src={IMG.RTLHAmbientPic3} alt="RTLH orders packaged with care" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.RTLHAmbientPic3} alt="RTLH orders packaged with care" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </Reveal>
           <Reveal style={{ transitionDelay: "0.06s" }}>
             <div style={{ borderRadius: 4, overflow: "hidden", border: `1px solid ${C.line}`, aspectRatio: "4/5" }}>
-              <img src={IMG.RTLHAmbientLogo} alt="RTLH monogram" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.RTLHAmbientLogo} alt="RTLH monogram" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </Reveal>
         </div>
@@ -1057,7 +1059,7 @@ function AboutPage({ navigate }) {
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }} className="rtlh-craft-grid">
           <Reveal>
             <div style={{ borderRadius: 4, overflow: "hidden", border: `1px solid ${C.line}`, aspectRatio: "4/5" }}>
-              <img src={IMG.RTLHAmbientPic4} alt="RTLH at a live event booth" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={IMG.RTLHAmbientPic4} alt="RTLH at a live event booth" loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </Reveal>
           <Reveal>
