@@ -18,7 +18,7 @@ npm run build
 ## Deploy to GitHub Pages
 
 1. Push this project to a GitHub repository.
-2. In the repository settings, enable GitHub Pages using the `gh-pages` branch that the workflow creates.
+2. In the repository settings, go to Pages and set the source to `GitHub Actions`.
 3. The included GitHub Actions workflow will build and deploy on pushes to `main`.
 4. If you are using a project site instead of a custom domain, your site will be published at:
    `https://<your-username>.github.io/<your-repository-name>/`
