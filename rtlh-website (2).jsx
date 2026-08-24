@@ -70,7 +70,7 @@ const PRODUCTS = [
       { id: "pink", image: IMG.TheHeartpiecePink },
       { id: "red", image: IMG.TheHeartpieceRed },
     ],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 24, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 24, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
   {
     id: "foldable-mirror", slug: "foldable-mirror", name: "The Foldable Mirror",
@@ -121,7 +121,7 @@ const PRODUCTS = [
       { id: "green", image: IMG.ThePorteGreen },
       { id: "pink", image: IMG.ThePortePink },
     ],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 16, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 16, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
   {
     id: "heart-necklace", slug: "heart-necklace", name: "The Heart Necklace",
@@ -130,7 +130,7 @@ const PRODUCTS = [
     mainImage: IMG.Necklacemain,
     colors: [{ id: "gold", image: IMG.Necklacemain }],
     gallery: [IMG.Necklace1, IMG.Necklace2],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 1, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 1, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
   {
     id: "card-holder", slug: "card-holder", name: "The Card Holder",
@@ -144,7 +144,7 @@ const PRODUCTS = [
       { id: "navy", image: IMG.RTLHCardHolderNavy },
     ],
     gallery: [IMG.RTLHWallet],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 20, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 20, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
 ];
 
