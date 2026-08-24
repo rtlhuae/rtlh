@@ -58,7 +58,7 @@ function colorLabel(id) {
 const PRODUCTS = [
   {
     id: "heart-charm", slug: "heart-charm", name: "The Heartpiece",
-    category: "Charms", collection: "Accessories", startingPrice: 95, icon: Gem,
+    category: "Charms", collection: "Accessories", startingPrice: 35, icon: Gem,
     description: "A heart-shaped bag charm on a long leather strap — engraved, embossed, or foiled to hold a name, a date, or a quiet inside joke.",
     mainImage: IMG.TheHeartpieceMain,
     colors: [
@@ -70,11 +70,11 @@ const PRODUCTS = [
       { id: "pink", image: IMG.TheHeartpiecePink },
       { id: "red", image: IMG.TheHeartpieceRed },
     ],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 24, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 24, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
   {
     id: "foldable-mirror", slug: "foldable-mirror", name: "The Foldable Mirror",
-    category: "Vanity", collection: "Accessories", startingPrice: 145, icon: CircleDot,
+    category: "Vanity", collection: "Accessories", startingPrice: 30, icon: CircleDot,
     description: "A stand-up travel mirror in soft leather, engraved on the cover — a small ceremony for an everyday object.",
     mainImage: IMG.FoldableMirrorMain,
     colors: [
@@ -86,7 +86,7 @@ const PRODUCTS = [
   },
   {
     id: "heart-mirror", slug: "heart-mirror", name: "The Heart Mirror",
-    category: "Vanity", collection: "Accessories", startingPrice: 135, icon: Gem,
+    category: "Vanity", collection: "Accessories", startingPrice: 35, icon: Gem,
     description: "The heart silhouette, reimagined as a compact mirror. Soft edges, a warm leather base, and room for an engraved or embossed line.",
     mainImage: IMG.HeartMirrorMain,
     colors: [
@@ -99,7 +99,7 @@ const PRODUCTS = [
   },
   {
     id: "voyage-tag", slug: "voyage-tag", name: "The Voyage Tag",
-    category: "Travel", collection: "Travel", startingPrice: 120, icon: Luggage,
+    category: "Travel", collection: "Travel", startingPrice: 35, icon: Luggage,
     description: "Full-grain leather, engraved or embossed with initials — a quiet marker of where a journey belongs.",
     mainImage: IMG.TheVoyageTagMain,
     colors: [
@@ -112,7 +112,7 @@ const PRODUCTS = [
   },
   {
     id: "magsafe-holder", slug: "magsafe-holder", name: "The Porte",
-    category: "Tech", collection: "Everyday Carry", startingPrice: 110, icon: Smartphone,
+    category: "Tech", collection: "Everyday Carry", startingPrice: 70, icon: Smartphone,
     description: "A leather MagSafe card holder for the essentials — cards, cash, and a name pressed quietly into the back.",
     mainImage: IMG.ThePorteMain,
     colors: [
@@ -121,20 +121,20 @@ const PRODUCTS = [
       { id: "green", image: IMG.ThePorteGreen },
       { id: "pink", image: IMG.ThePortePink },
     ],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 16, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 16, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
   {
     id: "heart-necklace", slug: "heart-necklace", name: "The Heart Necklace",
-    category: "Jewelry", collection: "Jewelry", startingPrice: 180, icon: Sparkles,
+    category: "Jewelry", collection: "Jewelry", startingPrice: 110, icon: Sparkles,
     description: "A delicate gold heart pendant on a fine chain — the smallest gesture, made to be worn every day.",
     mainImage: IMG.Necklacemain,
     colors: [{ id: "gold", image: IMG.Necklacemain }],
     gallery: [IMG.Necklace1, IMG.Necklace2],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 1, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 1, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
   {
     id: "card-holder", slug: "card-holder", name: "The Card Holder",
-    category: "Leather Goods", collection: "Everyday Carry", startingPrice: 150, icon: Wallet,
+    category: "Leather Goods", collection: "Everyday Carry", startingPrice: 180, icon: Wallet,
     description: "A slim, four-slot card holder in saffiano leather, personalized with initials where the hand naturally rests.",
     mainImage: IMG.RTLHCardHolderMain,
     colors: [
@@ -144,7 +144,7 @@ const PRODUCTS = [
       { id: "navy", image: IMG.RTLHCardHolderNavy },
     ],
     gallery: [IMG.RTLHWallet],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 20, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver", "rose"] },
+    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 20, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
   },
 ];
 
