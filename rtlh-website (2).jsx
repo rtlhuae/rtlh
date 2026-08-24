@@ -57,8 +57,8 @@ function colorLabel(id) {
 
 const PRODUCTS = [
   {
-    id: "heart-charm", slug: "heart-charm", name: "The Heartpiece35
-    category: "Charms", collection: "Accessories", startingPrice: 95, icon: Gem,
+    id: "heart-charm", slug: "heart-charm", name: "The Heartpiece",
+    category: "Charms", collection: "Accessories", startingPrice: 35, icon: Gem,
     description: "A heart-shaped bag charm on a long leather strap — engraved, embossed, or foiled to hold a name, a date, or a quiet inside joke.",
     mainImage: IMG.TheHeartpieceMain,
     colors: [
