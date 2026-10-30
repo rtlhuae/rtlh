@@ -5,6 +5,7 @@ import {
   ArrowRight, Music2, Globe, ShieldCheck, Truck, Sparkle,
 } from "lucide-react";
 import { IMG } from "./rtlh-assets";
+import { PRODUCTS, COLOR_HEX, COLOR_NAMES, PICTURE_GALLERY_URL } from "./rtlh-products";
 
 /* ---------------------------------------------------------------------- */
 /* BRAND TOKENS                                                            */
@@ -42,111 +43,10 @@ const SLOGAN = "made yours.";
 /* PRODUCT DATA                                                            */
 /* ---------------------------------------------------------------------- */
 
-const COLOR_HEX = {
-  black: "#1C1A18", blue: "#3C5A73", brown: "#6B4A34", green: "#3F5A4C",
-  navy: "#232C3E", pink: "#E3AAB8", red: "#8E2F2F", white: "#EFEAE0",
-  gray: "#8A867E", gold: "#B99456", silver: "#B9BAB6", natural: "#D8CBB4",
-  mint: "#AFC7BC", cream: "#E9DFC9", burgundy: "#5E1F2E", teal: "#6E97A0",
-  rose: "#B76E79",
-};
-
+// Product data now lives in rtlh-products.js (edit prices, colors, hide/show there).
 function colorLabel(id) {
-  const overrides = { mint: "Mint", cream: "Cream", burgundy: "Burgundy", teal: "Teal", natural: "Natural" };
-  return overrides[id] || id.charAt(0).toUpperCase() + id.slice(1);
+  return COLOR_NAMES[id] || id.charAt(0).toUpperCase() + id.slice(1);
 }
-
-const PRODUCTS = [
-  {
-    id: "heart-charm", slug: "heart-charm", name: "The Heartpiece",
-    category: "Charms", collection: "Accessories", startingPrice: 35, icon: Gem,
-    description: "A heart-shaped bag charm on a long leather strap — engraved, embossed, or foiled to hold a name, a date, or a quiet inside joke.",
-    mainImage: IMG.TheHeartpieceMain,
-    colors: [
-      { id: "black", image: IMG.TheHeartpieceBlack },
-      { id: "blue", image: IMG.TheHeartpieceBlue },
-      { id: "brown", image: IMG.TheHeartpieceBrown },
-      { id: "green", image: IMG.TheHeartpieceGreen },
-      { id: "navy", image: IMG.TheHeartpieceNavy },
-      { id: "pink", image: IMG.TheHeartpiecePink },
-      { id: "red", image: IMG.TheHeartpieceRed },
-    ],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 24, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
-  },
-  {
-    id: "foldable-mirror", slug: "foldable-mirror", name: "The Foldable Mirror",
-    category: "Vanity", collection: "Accessories", startingPrice: 30, icon: CircleDot,
-    description: "A stand-up travel mirror in soft leather, engraved on the cover — a small ceremony for an everyday object.",
-    mainImage: IMG.FoldableMirrorMain,
-    colors: [
-      { id: "brown", image: IMG.FoldableMirrorBrown },
-      { id: "mint", image: IMG.FoldableMirrorGreen },
-      { id: "pink", image: IMG.FoldableMirrorPink },
-    ],
-    customization: { engraving: true, embossing: false, foiling: false, pictureEngraving: true, maxEngravingChars: 20, maxEmbossingChars: 0, maxFoilingChars: 0, foilColors: [] },
-  },
-  {
-    id: "heart-mirror", slug: "heart-mirror", name: "The Heart Mirror",
-    category: "Vanity", collection: "Accessories", startingPrice: 35, icon: Gem,
-    description: "The heart silhouette, reimagined as a compact mirror. Soft edges, a warm leather base, and room for an engraved or embossed line.",
-    mainImage: IMG.HeartMirrorMain,
-    colors: [
-      { id: "mint", image: IMG.HeartMirrorBlue },
-      { id: "pink", image: IMG.HeartMirrorPink },
-      { id: "red", image: IMG.HeartMirrorRed },
-      { id: "cream", image: IMG.HeartMirrorWhite },
-    ],
-    customization: { engraving: true, embossing: true, foiling: false, pictureEngraving: true, maxEngravingChars: 18, maxEmbossingChars: 2, maxFoilingChars: 0, foilColors: [] },
-  },
-  {
-    id: "voyage-tag", slug: "voyage-tag", name: "The Voyage Tag",
-    category: "Travel", collection: "Travel", startingPrice: 35, icon: Luggage,
-    description: "Full-grain leather, engraved or embossed with initials — a quiet marker of where a journey belongs.",
-    mainImage: IMG.TheVoyageTagMain,
-    colors: [
-      { id: "blue", image: IMG.TheVoyageTagBlue },
-      { id: "brown", image: IMG.TheVoyageTagBrown },
-      { id: "pink", image: IMG.TheVoyageTagPink },
-      { id: "red", image: IMG.TheVoyageTagRed },
-    ],
-    customization: { engraving: true, embossing: true, foiling: false, pictureEngraving: true, maxEngravingChars: 22, maxEmbossingChars: 2, maxFoilingChars: 0, foilColors: [] },
-  },
-  {
-    id: "magsafe-holder", slug: "magsafe-holder", name: "The Porte",
-    category: "Tech", collection: "Everyday Carry", startingPrice: 70, icon: Smartphone,
-    description: "A leather MagSafe card holder for the essentials — cards, cash, and a name pressed quietly into the back.",
-    mainImage: IMG.ThePorteMain,
-    colors: [
-      { id: "navy", image: IMG.ThePorteBlue },
-      { id: "brown", image: IMG.ThePorteBrown },
-      { id: "green", image: IMG.ThePorteGreen },
-      { id: "pink", image: IMG.ThePortePink },
-    ],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 16, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
-  },
-  {
-    id: "heart-necklace", slug: "heart-necklace", name: "The Heart Necklace",
-    category: "Jewelry", collection: "Jewelry", startingPrice: 110, icon: Sparkles,
-    description: "A delicate gold heart pendant on a fine chain — the smallest gesture, made to be worn every day.",
-    mainImage: IMG.Necklacemain,
-    colors: [{ id: "gold", image: IMG.Necklacemain }],
-    gallery: [IMG.Necklace1, IMG.Necklace2],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 1, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
-  },
-  {
-    id: "card-holder", slug: "card-holder", name: "The Card Holder",
-    category: "Leather Goods", collection: "Everyday Carry", startingPrice: 180, icon: Wallet,
-    description: "A slim, four-slot card holder in saffiano leather, personalized with initials where the hand naturally rests.",
-    mainImage: IMG.RTLHCardHolderMain,
-    colors: [
-      { id: "black", image: IMG.RTLHCardHolderBlack },
-      { id: "burgundy", image: IMG.RTLHCardHolderBurgendy },
-      { id: "gray", image: IMG.RTLHCardHolderGray },
-      { id: "navy", image: IMG.RTLHCardHolderNavy },
-    ],
-    gallery: [IMG.RTLHWallet],
-    customization: { engraving: true, embossing: true, foiling: true, pictureEngraving: true, maxEngravingChars: 20, maxEmbossingChars: 2, maxFoilingChars: 2, foilColors: ["gold", "silver"] },
-  },
-];
 
 /* ---------------------------------------------------------------------- */
 /* WHATSAPP HELPERS                                                        */
@@ -163,12 +63,15 @@ function customizationLabel(type, foilColor) {
   return "No customization";
 }
 
-function buildWhatsAppLink({ product, colorId, type, text, foilColor }) {
+function buildWhatsAppLink({ product, colorId, type, text, foilColor, pictureNo }) {
   let msg = `Hello RTLH, I would like to order the ${product.name}.\n`;
   msg += `Color: ${colorLabel(colorId)}\n`;
   msg += `Customization: ${customizationLabel(type, foilColor)}\n`;
   if (type !== "none" && text) msg += `Text: ${text}\n`;
-  if (type === "picture") msg += "Please contact me to discuss the artwork and final engraving details.\n";
+  if (type === "picture") {
+    if (pictureNo) msg += `Picture number: ${pictureNo} (from the RTLH picture gallery)\n`;
+    else msg += "Please contact me to discuss the artwork and final engraving details.\n";
+  }
   msg += "Please share availability and pricing.";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 }
@@ -534,7 +437,7 @@ function HomePage({ navigate }) {
           </Reveal>
           <Reveal>
             <p style={{ fontFamily: sans, fontSize: 17, lineHeight: 1.85, color: C.ink }}>
-              RTLH began as a craft, not a catalogue. Every piece we make can be finished by hand — engraved, embossed, or foiled — in the seconds before it is given away. We believe gifting deserves ceremony, that materials deserve precision, and that a name pressed into leather carries more than a name pressed into a screen ever could.
+              RTLH began as a craft, not a catalogue. Every piece we make can be finished by hand — engraved by hand — in the seconds before it is given away. We believe gifting deserves ceremony, that materials deserve precision, and that a name pressed into leather carries more than a name pressed into a screen ever could.
             </p>
           </Reveal>
         </div>
@@ -796,11 +699,12 @@ function ProductPage({ slug, navigate }) {
   const [colorId, setColorId] = useState(null);
   const [type, setType] = useState("none");
   const [text, setText] = useState("");
+  const [pictureNo, setPictureNo] = useState("");
   const [foilColor, setFoilColor] = useState(product.customization.foilColors[0] || "gold");
 
   useEffect(() => {
     setColorId(null);
-    setType("none"); setText("");
+    setType("none"); setText(""); setPictureNo("");
     setFoilColor(product.customization.foilColors[0] || "gold");
   }, [slug]); // eslint-disable-line
 
@@ -811,7 +715,7 @@ function ProductPage({ slug, navigate }) {
     null;
 
   const waLink = buildWhatsAppLink({
-    product, colorId: activeColorId, type, text, foilColor: type === "foiling" ? foilColor : null,
+    product, colorId: activeColorId, type, text, pictureNo, foilColor: type === "foiling" ? foilColor : null,
   });
 
   const custOptions = [
@@ -848,7 +752,7 @@ function ProductPage({ slug, navigate }) {
                     Your {customizationLabel(type, foilColor)}
                   </div>
                   <div style={{ fontFamily: serif, fontSize: 22, color: C.charcoal, letterSpacing: "0.06em" }}>
-                    {type === "picture" ? "Please contact us on WhatsApp for the artwork details." : text}
+                    {type === "picture" ? (pictureNo ? `Picture No. ${pictureNo}` : "Choose a picture from the gallery.") : text}
                   </div>
                 </div>
               )}
@@ -945,9 +849,36 @@ function ProductPage({ slug, navigate }) {
               </div>
             )}
 
+            {/* Picture engraving: gallery link + picture number (only when "Picture engraving" is selected) */}
             {type === "picture" && (
-              <div style={{ marginBottom: 24, padding: "16px 18px", background: C.card, border: `1px solid ${C.line}`, borderRadius: 2, fontFamily: sans, fontSize: 13.5, lineHeight: 1.7, color: C.ink }}>
-                For picture engraving, please contact us on WhatsApp so we can confirm the artwork and final details before production.
+              <div style={{ marginBottom: 24 }}>
+                <div style={{ marginBottom: 16, padding: "16px 18px", background: C.card, border: `1px solid ${C.line}`, borderRadius: 2, fontFamily: sans, fontSize: 13.5, lineHeight: 1.7, color: C.ink }}>
+                  Browse our picture gallery, pick the one you like, and enter its number below. We'll confirm the final artwork with you on WhatsApp before production.
+                </div>
+                {PICTURE_GALLERY_URL && (
+                  <SecondaryButton
+                    as="a" href={PICTURE_GALLERY_URL} target="_blank" rel="noopener noreferrer"
+                    style={{ width: "100%", marginBottom: 20 }}
+                  >
+                    View all pictures <ArrowRight size={15} />
+                  </SecondaryButton>
+                )}
+                <div style={{ fontFamily: sans, fontSize: 12.5, fontWeight: 700, letterSpacing: "0.06em", color: C.charcoal, marginBottom: 14 }}>
+                  PICTURE NUMBER
+                </div>
+                <input
+                  value={pictureNo}
+                  onChange={(e) => setPictureNo(e.target.value.replace(/\D/g, "").slice(0, 5))}
+                  inputMode="numeric"
+                  placeholder="e.g. 12"
+                  style={{
+                    width: "100%", fontFamily: sans, fontSize: 15, padding: "14px 16px",
+                    border: `1px solid ${C.line}`, borderRadius: 2, background: C.card, color: C.charcoal,
+                    outline: "none", boxSizing: "border-box",
+                  }}
+                  onFocus={(e) => (e.target.style.borderColor = C.champagne)}
+                  onBlur={(e) => (e.target.style.borderColor = C.line)}
+                />
               </div>
             )}
 
@@ -1013,7 +944,7 @@ function AboutPage({ navigate }) {
           </Reveal>
           <Reveal>
             <p style={{ fontFamily: sans, fontSize: 17, lineHeight: 1.85, color: C.ink, marginBottom: 22 }}>
-              RTLH — pronounced Retlah — began with a simple belief: that a gift means more when someone can watch it become theirs. Not a name printed at a factory, but a name pressed, embossed, or foiled in front of them, by hand, in minutes.
+              RTLH — pronounced Retlah — began with a simple belief: that a gift means more when someone can watch it become theirs. Not a name printed at a factory, but a name engraved in front of them, by hand, in minutes.
             </p>
             <p style={{ fontFamily: sans, fontSize: 17, lineHeight: 1.85, color: C.ink }}>
               We work across the UAE with couples, brands, and hosts who want their gifting to feel considered — from an intimate engagement dinner to a stage activation for hundreds of guests. Every piece in our collection is designed to be personalized simply, so the ceremony of engraving stays the centerpiece, not the packaging around it.
@@ -1082,7 +1013,7 @@ function AboutPage({ navigate }) {
             {[
               { icon: MessageCircle, t: "Ordering", d: "Every order is placed and confirmed directly on WhatsApp — no cart, no checkout. We'll confirm color, customization, pricing, and timeline with you personally." },
               { icon: Truck, t: "Delivery", d: "We deliver across the UAE, and coordinate collection or shipping once your order and payment are confirmed on WhatsApp." },
-              { icon: ShieldCheck, t: "Customization", d: "Engraving, embossing, and foiling are set by hand, so placement may vary slightly from the live preview shown on each product." },
+              { icon: ShieldCheck, t: "Customization", d: "Engraving is done by hand, so placement may vary slightly from the live preview shown on each product." },
               { icon: Sparkle, t: "Care", d: "Keep leather pieces dry and away from direct sun; wipe metal and mirrored surfaces with a soft, dry cloth." },
             ].map((v, i) => (
               <Reveal key={v.t} style={{ transitionDelay: `${i * 0.06}s` }}>
